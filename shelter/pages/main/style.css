@@ -81,9 +81,7 @@ button{
 
 .header{
     height: auto;
-    
     background-color: transparent;
-
 }
 .nav-container{
     display: flex;
@@ -216,6 +214,13 @@ button{
     height: 52px;
     width: 207px;
     border: 0;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
 }
 
 .first-img{
