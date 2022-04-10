@@ -29,8 +29,7 @@
 /* шрифты */
 
 :root {
-    --bg-dark: #000000;
-    --color-gold: #BDAE82;
+    
     --color-white: #ffffff;
     --font1: 60px;
     --font2: 40px;
@@ -52,10 +51,6 @@ body{
     
     font-family: 'Arial', sans-serif;
     font-family: 'Georgia', serif;
-    /*font-style: normal;
-    font-size: 16px;
-    line-height: 1.2;
-    font-weight: normal;*/
     color: #ffffff;
     background: url(/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
     overflow-x: hidden;
@@ -69,6 +64,7 @@ img{
 
 button{
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .container{
@@ -112,6 +108,10 @@ button{
     text-decoration: none;
     height: 35px;
     margin-bottom: 10px;
+}
+
+.logo-main:hover{
+    color: #FFFFFF;
 }
 
 .logo-under{
@@ -162,6 +162,11 @@ button{
     line-height: 160%;
     color: #CDCDCD;
     transition: 0.5s;
+}
+
+.header-link:hover{
+    border-bottom: 3px solid #F1CDB3;
+    padding-bottom: 4px;
 }
 
 /*header ends*/
@@ -221,6 +226,10 @@ button{
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #292929;
+}
+
+.intro-button:hover{
+    background-color: #FDDCC4;
 }
 
 .first-img{
@@ -347,6 +356,10 @@ h3{
     border: 0;
 }
 
+.third-button:hover{
+    background-color:  #FDDCC4;
+}
+
 .card-item-button{
     border: 2px solid #F1CDB3;
     box-sizing: border-box;
@@ -359,6 +372,10 @@ h3{
     justify-content: center;
 }
 
+.card-item-button:hover{
+    background-color: #F1CDB3;
+}
+
 .card-item{
     width: 270px;
     height: 435px;
@@ -367,10 +384,16 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center;  
+    cursor: pointer;
+}
+
+.card-item:hover{
+    background-color: #F6F6F6;
 }
 
 .card-img{
     margin-bottom: 30px;
+    background: transparent;
 }
 
 .card-title{
@@ -404,6 +427,10 @@ h3{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.card-button:hover{
+    background-color: #F1CDB3;
 }
 
 /*third section end*/
@@ -529,6 +556,10 @@ h3{
     align-items: center;
 }
 
+.five-card:hover{
+    background-color: #FDDCC4;
+}
+
 .card-number{
     font-family: 'Georgia';
     font-style: normal;
@@ -542,6 +573,7 @@ h3{
     text-decoration: none;
     cursor: pointer;
 }
+
 
 .five-disc{
     font-family: 'Arial';

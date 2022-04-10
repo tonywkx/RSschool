@@ -54,7 +54,7 @@ body{
     font-family: 'Georgia', serif;
     color: #ffffff;
     /*background: url(/shelter/assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;*/
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
     margin: 0 auto;
 }
 
@@ -83,9 +83,11 @@ p{
 
 .header{
     height: 120px;
-    background-color: transparent;
+    background-color: #FFFFFF;
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 .nav-container{
     display: flex;
@@ -116,6 +118,11 @@ p{
     text-decoration: none;
     height: 35px;
     margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.logo-main:hover{
+    color: #F1CDB3;
 }
 
 .logo-under{
@@ -221,6 +228,11 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
+}
+
+.grid-item:hover{
+    background-color: #F6F6F6;
 }
 .item-img{
     margin-bottom: 30px;
@@ -253,6 +265,10 @@ p{
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #292929;
+}
+
+.item-button:hover{
+    background-color: #FDDCC4;
 }
 
 
