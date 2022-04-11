@@ -234,6 +234,11 @@ p{
 .grid-item:hover{
     background-color: #F6F6F6;
 }
+
+.grid-item:hover .item-button{
+    background-color: #FDDCC4;
+}
+
 .item-img{
     margin-bottom: 30px;
 }
@@ -327,16 +332,6 @@ p{
     box-sizing: border-box;
     border-radius: 100px;
 }
-
-
-
-
-
-
-
-
-
-
 
 /*footer starts*/
 
