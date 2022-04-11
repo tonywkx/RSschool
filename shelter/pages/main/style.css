@@ -387,8 +387,12 @@ h3{
     cursor: pointer;
 }
 
-.card-item:hover{
+.card-item:hover {
     background-color: #F6F6F6;
+}
+
+.card-item:hover .card-button{
+    background-color: #FDDCC4;
 }
 
 .card-img{
@@ -469,8 +473,8 @@ h3{
     height: 281px;
     display: flex;
     flex-wrap: wrap;
-      grid-gap: 3.4375rem 7.5rem;
-      justify-content: center;
+    grid-gap: 3.4375rem 7.5rem;
+    justify-content: center;
 }
 
 .four-item{
