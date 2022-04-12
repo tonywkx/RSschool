@@ -181,7 +181,7 @@ button{
     height: 728px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    
 }
 
 .first-title{
@@ -190,6 +190,7 @@ button{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 163px;
 }
 
 .intro-title{
