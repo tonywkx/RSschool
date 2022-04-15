@@ -646,9 +646,7 @@ h3{
 /*footer ends*/
 
 @media only screen and (max-width: 1279px) and (min-width: 768px) {
-    .container{
     
-    }
     .nav-container{
         margin-top: 30px;
         margin-left: 30px;
@@ -656,17 +654,15 @@ h3{
     }
 
     .first-container{
-        height: 1165px;
+        height: auto;
         flex-direction: column;
         align-items: center;
-        
     }
 
     .first-title{
         margin: 0;
         align-items: center;
         margin-bottom: 100px;
-
     }
 
     .intro-title-adaptive{
@@ -678,20 +674,89 @@ h3{
         align-self: flex-start;
     }
 
-    .intro-button{
-
-    }
-
     .first-img{
-        margin-left: 70px;
+        width: 569px;
+        height: 593px;
+        margin-left: 169px;
     }
 
+    .second{
+        height: auto;
+    }
 
+    .second-container{
+        height: 1048px;
+        flex-direction: column-reverse;  
+    }
 
+    .second-title{
+        margin: 0;
+    }
+   
+    .card-container{
+        width: auto;
+        gap: 12px;
+    }
 
+    .grid-cards{
+        width: auto;
+        gap: 8%;
+    }
 
+    .card-item:not(:nth-child(-n+2)){
+        display: none;
+    }
 
+    .third-button{
+        width: 260px;
+    }
 
+    .four{
+        height: 779px;
+    }
 
+    .four-container{
+        height: 599px;
+    }
+
+    .four-cards-container{
+        width: 630px;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1vw;
+        height: 449px;   
+    }
+
+    .five{
+        height: 783px;
+    }
+
+    .five-container{
+        width: auto;
+        height: auto;
+        flex-direction: column-reverse;
+    }
+
+    .five-text{
+        margin-bottom: 9vw;
+    }
+
+    .footer{
+        height: 639px;
+    }
+
+    .footer-container{
+        height: 639px;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9vw;
+        align-items: center;
+        justify-content: center;  
+    }
     
+    .footer-desc{
+        margin-top: 30px;
+    }
 }
