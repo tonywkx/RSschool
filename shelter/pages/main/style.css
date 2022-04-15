@@ -744,16 +744,20 @@ h3{
 
     .footer{
         height: 639px;
+        display: flex;
+        align-items: center;
     }
 
     .footer-container{
+        width: 708px;
         height: 639px;
         margin: 0;
         display: flex;
         flex-wrap: wrap;
-        gap: 9vw;
+        gap: 6vw;
         align-items: center;
         justify-content: center;  
+        padding: 0;
     }
     
     .footer-desc{
