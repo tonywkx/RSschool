@@ -416,8 +416,8 @@ p{
     }
 
     .grid-container{
-        height: 194.444vh;
-        width: 75.52vw;
+        height: 194.4vh;
+        width: 75.5vw;
     }
 
     .grid-item:not(:nth-child(-n+6)){
