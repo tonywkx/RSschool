@@ -448,7 +448,7 @@ p{
     }
 
     .grid-container{
-        height: 194.4vh;
+        height: 1365px;
         width: 75.5vw;
     }
 
@@ -480,6 +480,10 @@ p{
     
     .footer-desc{
         margin-top: 30px;
+    }
+    .footer-img{
+        width: 300px;
+        height: 310px;
     }
 
 }
@@ -576,7 +580,7 @@ p{
     .footer-desc{
         margin-top: 0;
         align-items: center;
-        gap: 5vh;
+        gap: 40px;
         height: auto;  
     }
 
