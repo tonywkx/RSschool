@@ -717,14 +717,21 @@ h3{
     }
 
     .second-container{
-        height: 1048px;
+        margin-top: 80px;
+        margin-bottom: 100px;
+        height: 868px;
         flex-direction: column-reverse;  
+        justify-content: space-between;
     }
 
     .second-title{
         margin: 0;
     }
    
+    .third-container{
+        margin-top: 80px;
+        margin-bottom: 100px;
+    }
     .card-container{
         width: auto;
         gap: 12px;
@@ -749,6 +756,8 @@ h3{
 
     .four-container{
         height: 599px;
+        margin-top: 80px;
+        margin-bottom: 100px;
     }
 
     .four-cards-container{
@@ -766,8 +775,10 @@ h3{
 
     .five-container{
         width: auto;
-        height: auto;
+        height: 603px;
         flex-direction: column-reverse;
+        margin-top: 80px;
+        margin-bottom: 100px;
     }
 
     .five-text{
@@ -834,7 +845,7 @@ h3{
     .first-title{
         margin: 0 3.1vw;
         width: auto;
-        height: 42.2vh;
+        height: 296px;
         align-items: center;
         gap: 6vh;
     }
@@ -864,16 +875,16 @@ h3{
         margin: 0 3.1vw;
         flex-direction: column-reverse;
         align-items: center;
-        gap: 6vh;
+        gap: 42px;
         justify-content: flex-end;  
     }
 
     .second-title{
         margin-left: 0;
         width: auto;
-        height: 70.4vh;
+        height: 494px;
         align-items: center;
-        gap: 3.6vh;
+        gap: 22px;
     }
 
     .about-title{
@@ -955,7 +966,7 @@ h3{
         height: 555px;  
     }
     .four-item{
-        height: 12.4vh;
+        height: 87px;
         width: 130px;
     }
     .four-card-title{
@@ -980,7 +991,7 @@ h3{
     .five-text{
         align-items: center;
         width: auto;
-        height: 40vh;
+        height: 281px;
     }
     .five-title{
         font-size: 25px;
@@ -1018,7 +1029,7 @@ h3{
     .footer-desc{
         margin-top: 0;
         align-items: center;
-        gap: 5vh;
+        gap: 40px;
         height: auto;  
     }
 
