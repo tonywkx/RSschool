@@ -443,13 +443,13 @@ p{
     }
 
     .main-container{
-        width: 92.19vw;
+        width: 708px;
         height: 1603px; 
     }
 
     .grid-container{
         height: 1365px;
-        width: 75.5vw;
+        width: 580px;
     }
 
     .grid-item:not(:nth-child(-n+6)){
