@@ -915,10 +915,11 @@ h3{
     }
     /*third*/
     .third{
+        height: 791px;
         align-items: center;
     }
     .third-container{
-        height: 791px;
+        height: 707px;
         margin: 0 3.1vw;
     }
 

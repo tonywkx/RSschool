@@ -450,6 +450,9 @@ p{
         margin-top: 60px;
         margin-bottom: 70px;
     }
+    .main-title{
+        padding-top: 20px;
+    }
 
     .grid-container{
         height: 1365px;
