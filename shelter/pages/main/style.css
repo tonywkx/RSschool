@@ -276,14 +276,16 @@ button{
     height: 588px;
     background-color: #FFFFFF;
     display: flex;
-    align-items: center;   
+      
 }
 
 .second-container{
     height: 408px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;  
+    align-items: center; 
+    margin-top: 80px;
+    margin-bottom: 100px; 
 }
 
 .second-title{
@@ -328,7 +330,7 @@ button{
     height: 877px;
     background-color: #F6F6F6;
     display: flex;
-    align-items: center; 
+     
 }
 
 .third-container{
@@ -337,6 +339,8 @@ button{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-top: 80px;
+    margin-bottom: 100px;
 }
 
 h2,
@@ -477,7 +481,7 @@ h3{
     height: 611px;
     background-color: #FFFFFF;
     display: flex;
-    align-items: center; 
+     
 }
 
 .four-container{
@@ -485,7 +489,9 @@ h3{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;      
+    align-items: center;  
+    margin-top: 80px;
+    margin-bottom: 100px;    
 }
 
 .four-title{
@@ -538,7 +544,7 @@ h3{
     height: 462px;
     background: #F6F6F6;
     display: flex;
-    align-items: center; 
+     
 }
 
 .five-container{
@@ -548,6 +554,8 @@ h3{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 80px;
+    margin-bottom: 100px;
 }
 
 .five-text{
@@ -869,6 +877,7 @@ h3{
     /*second*/
     .second{
         height: 974px;
+        align-items: center;
     }
     .second-container{
         height: 890px;
@@ -905,6 +914,9 @@ h3{
         
     }
     /*third*/
+    .third{
+        align-items: center;
+    }
     .third-container{
         height: 791px;
         margin: 0 3.1vw;
@@ -953,6 +965,7 @@ h3{
     .four-container{
         height: 745px;
         justify-content: space-evenly;
+        margin: 0;
     }
     .four-title{
         font-size: 25px;
