@@ -219,7 +219,7 @@ p{
     height: 1342px;
     background: #F6F6F6;
     display: flex;
-    align-items: center;
+    
 }
 
 .main-container{
@@ -228,6 +228,8 @@ p{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-top: 80px;
+    margin-bottom: 100px;
 }
 
 .main-title{
@@ -445,6 +447,8 @@ p{
     .main-container{
         width: 708px;
         height: 1603px; 
+        margin-top: 60px;
+        margin-bottom: 70px;
     }
 
     .grid-container{
