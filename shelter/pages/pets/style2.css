@@ -531,6 +531,7 @@ p{
     /*main*/
     .main{
         height: 1649px;
+        align-items: center;
     }
     .main-container{
         height: 1565px;
