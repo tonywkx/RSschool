@@ -57,7 +57,7 @@ body{
     margin: 0 auto;
 }
 body.--close {
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 img{
@@ -389,11 +389,69 @@ h3{
 
 }
 
+.carousel{
+    display: flex;
+}
+
+.carousel-wrapper{
+    width: 990px;
+    
+    overflow: hidden;
+}
+
 .grid-cards{
     width: 990px;
     display: flex;
     justify-content: space-between;
+    gap: 90px;
 }
+
+/*.card-item.activated {
+    background: #ccc;
+  }
+  
+  .grid-cards:first-child .card-item {
+    background: LawnGreen;
+  }
+  
+  .grid-cards:last-child .card-item {
+    background: LightSkyBlue;
+  }*/
+  
+  /*.grid-cards {
+    gap: 20px;
+  
+  }*/
+
+  .carousel {
+    position: relative;
+    left: -990px;
+    
+  }
+  
+  @keyframes move-right {
+    from {left: -990px;}
+    to {left: -1280px;}
+  }
+  
+  .transition-right {
+    animation-name: move-right;
+    animation-duration: 3s;
+  }
+  
+  @keyframes move-left {
+    from {left: -990px;}
+    to {left: 0px;}
+  }
+  
+  .transition-left {
+    animation-name: move-left;
+    animation-duration: 3s;
+  }
+  
+  .hidden {
+    display: none;
+  }
 
 .third-button{
     width: 260px;
@@ -880,9 +938,9 @@ h3{
         display: flex;
     }
 
-    .nav-logo{
+    /*.nav-logo{
         margin-right: 43px;
-    }
+    }*/
 
     .header-burger {
         display: block;
