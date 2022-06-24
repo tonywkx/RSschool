@@ -1,3 +1,4 @@
+
 const path = require('path');
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -9,6 +10,11 @@ const baseConfig = {
     module: {
         rules: [
             {
+                test: /\.ts$/,
+                include: [path.resolve(__dirname, 'src')],
+                use: 'ts-loader',
+            },
+            {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
             },
@@ -19,7 +25,7 @@ const baseConfig = {
     },
     output: {
         filename: 'index.js',
-        path: path.resolve(__dirname, '../dist'),
+        path: path.resolve(__dirname, '../migration-to-ts/dist'),
     },
     plugins: [
         new HtmlWebpackPlugin({
