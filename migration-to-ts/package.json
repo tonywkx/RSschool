@@ -5,6 +5,7 @@
     "main": "webpack.base.config.js",
     "scripts": {
         "dev": "webpack --mode development",
+        "serv": "webpack-dev-server --mode development --open",
         "start": "webpack serve --open --config ./webpack.config.js --env mode=dev",
         "build": "webpack --config ./webpack.config.js --env mode=prod",
         "lint": "eslint . --ext .ts"
@@ -14,7 +15,7 @@
         "url": ""
     },
     "keywords": [],
-    "author": "Aleh Serhiyenia",
+    "author": "Anton Kolesnikov",
     "license": "ISC",
     "homepage": "",
     "devDependencies": {
