@@ -1,7 +1,10 @@
 import AppController from '../controller/controller';
-import { AppView } from '../view/appView';
+import { AppView, IDrawNews, IDrawSources } from '../view/appView';
 
 class App {
+
+    controller: AppController
+    view: AppView
     constructor() {
         this.controller = new AppController();
         this.view = new AppView();
@@ -10,8 +13,9 @@ class App {
     start() {
         (document
             .querySelector('.sources') as HTMLElement)
-            .addEventListener('click', (e) => this.controller.getNews(e, (data) => this.view.drawNews(data)));
-        this.controller.getSources((data) => this.view.drawSources(data));
+            .addEventListener('click', (e: Event) => this.controller.getNews(e, (data:IDrawNews) => this.view.drawNews(data)));
+        this.controller.getSources((data:IDrawSources) => this.view.drawSources(data));
+        
     }
 }
 

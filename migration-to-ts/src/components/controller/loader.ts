@@ -1,5 +1,5 @@
-
-
+/* import {IDrawSources  } from '../view/appView'
+ */
 interface IerrorHandler {
     bodyUsed?: boolean
     headers?: object  
@@ -12,10 +12,14 @@ interface IerrorHandler {
     json(): void 
 }
 
+
+type UrlOptions = {
+    [prop: string]: string;
+}
 class Loader {
     baseLink: string;
-    options: object;
-    constructor(baseLink: string, options: object) {
+    options: UrlOptions;
+    constructor(baseLink: string, options: UrlOptions) {
         this.baseLink = baseLink;
         this.options = options;  
     }
@@ -25,13 +29,13 @@ class Loader {
         callback = () => {
             console.error('No callback for GET response');
         }
-    ): void {
+    ) {
         this.load('GET', endpoint, callback, options);
-        console.log(endpoint);
+        
         
     }
 
-    errorHandler(res:IerrorHandler) {
+    errorHandler(res: IerrorHandler) {
         if (!res.ok) {
             if (res.status === 401 || res.status === 404)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
@@ -40,8 +44,8 @@ class Loader {
         return res;
     }
 
-    makeUrl(options: object, endpoint) {
-        const urlOptions = { ...this.options, ...options };
+    makeUrl(options: {source?: string}, endpoint: Response) {
+        const urlOptions: UrlOptions = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
         
 
@@ -52,7 +56,8 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load(method: string, endpoint: string, callback, options = {}): void {
+    load(method: string, endpoint: Response, callback, options = {}) {
+        console.log(callback);
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => res.json())
