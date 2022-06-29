@@ -11,12 +11,15 @@ interface IerrorHandler {
     url?: string
     json(): void 
 }
-
+/* 
+interface GenericInterface<U> {
+    getResp?: () => U
+} */
 
 type UrlOptions = {
     [prop: string]: string;
 }
-class Loader {
+class Loader  {
     baseLink: string;
     options: UrlOptions;
     constructor(baseLink: string, options: UrlOptions) {
@@ -25,11 +28,11 @@ class Loader {
     }
     
     getResp(
-        { endpoint, options = {} },
-        callback = () => {
+        { endpoint, options = {} } : { endpoint: string; options?: Record<string,string>},
+        callback: <T>(data: T) => void= () => {
             console.error('No callback for GET response');
         }
-    ) {
+    ): void {
         this.load('GET', endpoint, callback, options);
         
         
@@ -44,7 +47,7 @@ class Loader {
         return res;
     }
 
-    makeUrl(options: {source?: string}, endpoint: Response) {
+    makeUrl(options: {source?: string}, endpoint: string) {
         const urlOptions: UrlOptions = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
         
@@ -56,8 +59,8 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load(method: string, endpoint: Response, callback, options = {}) {
-        console.log(callback);
+    load(method: string, endpoint: string, callback: <T>(data: T) => void, options = {}) {
+       
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => res.json())

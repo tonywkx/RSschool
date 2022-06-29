@@ -1,31 +1,40 @@
 
+
+import { NewLoad } from '../view/news/news';
+import { ILoadedData } from '../view/sources/sources';
+
+/* import { NewLoad } from '../view/news/news'; */
 import AppLoader from './appLoader';
 
+type CallbackType <T> =(data: T) => void ;
+
 class AppController extends AppLoader {
-    getSources(callback) {
-        console.log(callback);
+    getSources(callback: CallbackType<ILoadedData>): void {
+        
         super.getResp(
             {
                 endpoint: 'sources',
             },
             callback
         );
+        console.log(callback);
     }
 
-    getNews(e , callback) {
+    getNews(e: Event , callback: CallbackType<NewLoad>) {
+        
         let target = e.target;
         const newsContainer = e.currentTarget;
 
         while (target !== newsContainer) {
-            if (target.classList.contains('source__item')) {
-                const sourceId = target.getAttribute('data-source-id');
-                if (newsContainer.getAttribute('data-source') !== sourceId) {
-                    newsContainer.setAttribute('data-source', sourceId);
+            if ((target as HTMLElement).classList.contains('source__item')) {
+                const sourceId = (target as HTMLElement).getAttribute('data-source-id');
+                if ((newsContainer as HTMLElement).getAttribute('data-source') !== sourceId) {
+                    (newsContainer as HTMLElement).setAttribute('data-source', sourceId!);
                     super.getResp(
                         {
                             endpoint: 'everything',
                             options: {
-                                sources: sourceId,
+                                sources: sourceId!,
                             },
                         },
                         callback
@@ -33,7 +42,7 @@ class AppController extends AppLoader {
                 }
                 return;
             }
-            target = target.parentNode;
+            target = (target as HTMLElement).parentNode;
         }
     }
 }
