@@ -1,5 +1,4 @@
-/* import {IDrawSources  } from '../view/appView'
- */
+
 interface IerrorHandler {
     bodyUsed?: boolean
     headers?: object  
@@ -11,10 +10,6 @@ interface IerrorHandler {
     url?: string
     json(): void 
 }
-/* 
-interface GenericInterface<U> {
-    getResp?: () => U
-} */
 
 type UrlOptions = {
     [prop: string]: string;
@@ -27,14 +22,13 @@ class Loader  {
         this.options = options;  
     }
     
-    getResp(
+    getResp<Data>(
         { endpoint, options = {} } : { endpoint: string; options?: Record<string,string>},
-        callback: <T>(data: T) => void= () => {
+        callback: (data: Data) => void= () => {
             console.error('No callback for GET response');
         }
     ): void {
         this.load('GET', endpoint, callback, options);
-        
         
     }
 
@@ -59,12 +53,12 @@ class Loader  {
         return url.slice(0, -1);
     }
 
-    load(method: string, endpoint: string, callback: <T>(data: T) => void, options = {}) {
+    load<Data>(method: string, endpoint: string, callback: (data: Data) => void, options = {}) {
        
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
             .then((res) => res.json())
-            .then((data) => callback(data))
+            .then((data) => callback(data!))
             .catch((err) => console.error(err));
     }
 }

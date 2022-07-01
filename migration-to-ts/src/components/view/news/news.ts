@@ -1,16 +1,15 @@
 import './news.css';
 
 export interface NewLoad{
-    author?: string
-    content?: string
     description: string
     publishedAt:string 
     source: {id: string, name: string}
     title: string
     url: string
     urlToImage: string
+    author?: string
+    content?: string
 }
-
 
 class News {
     draw(data: NewLoad[]) {

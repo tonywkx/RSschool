@@ -1,15 +1,8 @@
 
-
-import { NewLoad } from '../view/news/news';
-import { ILoadedData } from '../view/sources/sources';
-
-/* import { NewLoad } from '../view/news/news'; */
 import AppLoader from './appLoader';
 
-type CallbackType <T> =(data: T) => void ;
-
 class AppController extends AppLoader {
-    getSources(callback: CallbackType<ILoadedData>): void {
+    getSources<Data>(callback: (data: Data) => void): void {
         
         super.getResp(
             {
@@ -20,7 +13,7 @@ class AppController extends AppLoader {
         console.log(callback);
     }
 
-    getNews(e: Event , callback: CallbackType<NewLoad>) {
+    getNews<Data>(e: Event , callback: (data: Data) => void) {
         
         let target = e.target;
         const newsContainer = e.currentTarget;

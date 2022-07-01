@@ -28,7 +28,7 @@ export class AppView {
         this.news.draw(values);
     }
 
-    drawSources(data: IDrawSources | undefined): void {
+    drawSources(data: IDrawSources | undefined  ): void {
         
         const values = data?.sources ? data?.sources : [];
         this.sources.draw(values);
