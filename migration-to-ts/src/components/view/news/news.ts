@@ -25,7 +25,7 @@ class News {
             if (idx % 2) (newsClone.querySelector('.news__item')as HTMLTemplateElement).classList.add('alt');
 
             (newsClone.querySelector('.news__meta-photo')as HTMLTemplateElement).style.backgroundImage = `url(${
-                'img/news_placeholder.jpg' || item.urlToImage 
+                './news_placeholder.jpg' || item.urlToImage 
             })` ;
             (newsClone.querySelector('.news__meta-author')as HTMLElement).textContent = item.author || item.source.name;
             (newsClone.querySelector('.news__meta-date') as HTMLElement).textContent = item.publishedAt
