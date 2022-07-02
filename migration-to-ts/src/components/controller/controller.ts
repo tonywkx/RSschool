@@ -3,14 +3,12 @@ import AppLoader from './appLoader';
 
 class AppController extends AppLoader {
     getSources<Data>(callback: (data: Data) => void): void {
-        
         super.getResp(
             {
                 endpoint: 'sources',
             },
             callback
         );
-        console.log(callback);
     }
 
     getNews<Data>(e: Event , callback: (data: Data) => void) {
