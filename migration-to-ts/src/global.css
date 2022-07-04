@@ -5,12 +5,39 @@ body {
 }
 
 header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 30px;
 }
 
 header h1 {
     font-size: 40px;
     font-weight: 800;
+    color: #70d6ff;
+}
+
+/* main{
+    height: 800px;
+} */
+.letter-container{
+    margin: 0 auto;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.letter{
+    color: #70d6ff;
+    background: transparent;
+    border: 2px solid #30c5ff;
+    transition: 0.25s;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+
 }
 
 footer {

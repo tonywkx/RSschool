@@ -8,6 +8,7 @@ export interface ILoadedData{
 }
 class Sources {
     draw(data: Array<ILoadedData>) {
+        console.log(data);
         const fragment = document.createDocumentFragment();
         const sourceItemTemp = (document.querySelector('#sourceItemTemp')as HTMLTemplateElement);
 

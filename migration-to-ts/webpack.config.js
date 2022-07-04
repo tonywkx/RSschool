@@ -46,10 +46,7 @@ const baseConfig = {
                 from: path.resolve(__dirname, 'src/assets/favicon.ico'),
                 to: path.resolve(__dirname, 'dist'),
               },
-              {
-                from: path.resolve(__dirname, 'src/assets/news_placeholder.jpg'),
-                to: path.resolve(__dirname, 'dist'),
-              },
+              
             ],
           }),
           new EslingPlugin({ extensions: 'ts' })
