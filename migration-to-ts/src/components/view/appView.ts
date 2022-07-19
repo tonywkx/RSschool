@@ -2,6 +2,8 @@
 import  News, { NewLoad } from './news/news';
 import Sources, { ILoadedData } from './sources/sources';
 
+
+
 export interface IDrawNews{
     status: string
     totalResults: number
@@ -32,7 +34,13 @@ export class AppView {
         
         const values = data?.sources ? data?.sources : [];
         this.sources.draw(values);
+        console.log(values)
     }
+
+/*     renderSources(data: IDrawSources | undefined  ): void{
+        this.sources.draw()
+        console.log(data)
+    } */
 }
 
 export default AppView;

@@ -1,5 +1,8 @@
+/* eslint-disable prefer-const */
+
 
 import AppLoader from './appLoader';
+
 
 class AppController extends AppLoader {
     getSources<Data>(callback: (data: Data) => void): void {
@@ -9,7 +12,13 @@ class AppController extends AppLoader {
             },
             callback
         );
+        
     }
+
+    /* filterSources(data: Array<ILoadedData>){
+        
+    } */
+    
 
     getNews<Data>(e: Event , callback: (data: Data) => void) {
         
@@ -26,14 +35,19 @@ class AppController extends AppLoader {
                             endpoint: 'everything',
                             options: {
                                 sources: sourceId!,
+                            
                             },
+                        
+                            
                         },
                         callback
+                        
                     );
                 }
                 return;
             }
             target = (target as HTMLElement).parentNode;
+            
         }
     }
 }

@@ -1,4 +1,6 @@
+/* eslint-disable prefer-const */
 import './sources.css';
+
 
 export interface ILoadedData{
     id: string
@@ -8,7 +10,19 @@ export interface ILoadedData{
 }
 class Sources {
     draw(data: Array<ILoadedData>) {
-        console.log(data);
+        const container = document.querySelector('.letter-container');
+
+        function findLetter(e: Event){
+            let findRes = (e.target as HTMLElement).innerText.toLowerCase();
+            let filtered = data.filter(item => item.id.charAt(0) === findRes)
+            console.log(filtered);
+            return filtered;
+        }
+
+        container!.addEventListener('click', findLetter);
+
+        
+     
         const fragment = document.createDocumentFragment();
         const sourceItemTemp = (document.querySelector('#sourceItemTemp')as HTMLTemplateElement);
 
@@ -23,6 +37,7 @@ class Sources {
 
         (document.querySelector('.sources') as HTMLElement).append(fragment);
     }
+    
 }
 
 export default Sources;
