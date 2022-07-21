@@ -33,14 +33,8 @@ export class AppView {
     drawSources(data: IDrawSources | undefined  ): void {
         
         const values = data?.sources ? data?.sources : [];
-        this.sources.draw(values);
-        console.log(values)
+        this.sources.setUp(values);
     }
-
-/*     renderSources(data: IDrawSources | undefined  ): void{
-        this.sources.draw()
-        console.log(data)
-    } */
 }
 
 export default AppView;

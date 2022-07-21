@@ -10,7 +10,6 @@ export interface NewLoad{
     author?: string
     content?: string
 }
-
 class News {
     draw(data: NewLoad[]) {
         

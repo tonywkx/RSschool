@@ -11,14 +11,8 @@ class AppController extends AppLoader {
                 endpoint: 'sources',
             },
             callback
-        );
-        
+        );  
     }
-
-    /* filterSources(data: Array<ILoadedData>){
-        
-    } */
-    
 
     getNews<Data>(e: Event , callback: (data: Data) => void) {
         

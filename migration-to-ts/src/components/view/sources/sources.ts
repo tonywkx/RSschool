@@ -1,7 +1,5 @@
 /* eslint-disable prefer-const */
 import './sources.css';
-
-
 export interface ILoadedData{
     id: string
     name: string
@@ -9,20 +7,31 @@ export interface ILoadedData{
     url?: string
 }
 class Sources {
-    draw(data: Array<ILoadedData>) {
+
+    setUp(data: Array<ILoadedData>){
+
         const container = document.querySelector('.letter-container');
+        const viewAll = document.querySelector('.all');
 
-        function findLetter(e: Event){
+        const findLetter = (e: Event) => {
             let findRes = (e.target as HTMLElement).innerText.toLowerCase();
-            let filtered = data.filter(item => item.id.charAt(0) === findRes)
-            console.log(filtered);
-            return filtered;
-        }
-
+            let filtered = data.filter(item => item.id.charAt(0) === findRes);
+            viewAll!.classList.remove('hidden');
+            this.draw(filtered);
+        };
         container!.addEventListener('click', findLetter);
 
+        const viewAllBack = () => {
+            viewAll!.classList.add('hidden');
+            this.draw(data); 
+        };
+        viewAll!.addEventListener('click', viewAllBack);
+
+        this.draw(data);
+        return this;
+    }
+    draw(data: Array<ILoadedData>) {
         
-     
         const fragment = document.createDocumentFragment();
         const sourceItemTemp = (document.querySelector('#sourceItemTemp')as HTMLTemplateElement);
 
@@ -35,6 +44,7 @@ class Sources {
             fragment.append(sourceClone);
         });
 
+        (document.querySelector('.sources') as HTMLElement).innerHTML = '';
         (document.querySelector('.sources') as HTMLElement).append(fragment);
     }
     
