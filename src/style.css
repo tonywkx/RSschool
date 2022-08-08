@@ -1,15 +1,60 @@
-.text{
-    margin: 0 auto;
-    width: 8rem;
-    height: auto;
-    text-align: center;
-    color: blue;
+body{
+    background-color: darkgray;
+}
+
+.general-buttons{
+    width: auto;
+    display: flex;
+    background-color: beige;
+}
+
+.button{
+    border: 2px;
+    border-radius: 25%;
     background-color: aqua;
 }
 
-.cube{
-    width: 50px;
-    height: 50px;
-    margin: 0 auto;
-    background-color: brown;
+.car-name{  
+    color: brown;
 }
+
+.road{
+    color: black;
+    background-color: blueviolet;
+    width: auto;
+}
+
+.launch-pad{
+    display: flex;
+}
+
+.control-panel{
+    background-color: azure;
+}
+
+.icon{
+    background-color: bisque;
+    border: 2px dotted;
+}
+
+.car{
+    width: 30px;
+    height: auto;
+}
+
+.flag{
+    background-color: blanchedalmond;
+}
+
+h1,
+h2{
+    color: brown;
+    font-size: large;
+    font-weight: 600;
+}
+
+.garage{
+    background-color: chocolate;
+    display: flex;
+}
+
