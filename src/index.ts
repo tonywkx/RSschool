@@ -7,12 +7,12 @@ console.log(getCars(3,5))
 
 
 
-/* const f = document.createElement('div');
-f!.innerHTML = "GOOOD";
+const f = document.createElement('div');
+f!.innerHTML = "БУДУ ЕЩЕ ДЕЛАТЬ В БЛИЖАЙШИЕ ДНИ";
 f.classList.add('text');
 document.body.appendChild(f);
 const k = document.createElement('div');
-k.classList.add('cube'); */
+k.classList.add('cube');
 
 
     const html = `

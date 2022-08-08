@@ -2,6 +2,21 @@ body{
     background-color: darkgray;
 }
 
+.text{
+    font-size: large;
+    margin: 0 auto;
+    font-weight: 700;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+
+.cube{
+    width: 100px;
+    height: 150px;
+    background-color: aquamarine;
+}
+
 .general-buttons{
     width: auto;
     display: flex;
